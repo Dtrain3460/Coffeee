@@ -5,7 +5,6 @@ import javax.swing.JOptionPane;
 
 public class MorningRushTester 
 {
-
 	private static final int DELAY = 1000;
 	public MorningRushTester() 
 	{
@@ -18,6 +17,7 @@ public class MorningRushTester
 		{
 			private int gulps;
 			
+			private int initialGulps = 5;
 			public DrinkCoffee(int inGulps) 
 			{
 				gulps = inGulps;
@@ -33,6 +33,8 @@ public class MorningRushTester
 				else if (gulps == 0)
 				{
 					System.out.println("Go to school.");
+					JOptionPane.showMessageDialog(null, "Make Another?");
+					gulps = initialGulps;
 				}
 			}
 		}
